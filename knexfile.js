@@ -12,6 +12,6 @@ module.exports = {
     migrations: {
       directory: path.resolve(__dirname, 'src', 'database', 'knex', 'migrations')
     },
-    useNullasDefault: true
+    useNullAsDefault: true
   }
 };
