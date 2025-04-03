@@ -6,12 +6,14 @@ const AppError = require('./utils/AppError')
 const express = require('express')
 const app = express()
 
+const cors = require('cors')
 const routes = require('./routes')
 
 const PORT = 8080
 
 migrationsRun();
 
+app.use(cors())
 app.use(express.json())
 app.use(routes)
 
