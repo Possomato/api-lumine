@@ -1,3 +1,4 @@
+require('dotenv/config')
 require('express-async-errors')
 
 const migrationsRun = require('./database/sqlite/migrations')
@@ -9,7 +10,7 @@ const app = express()
 const cors = require('cors')
 const routes = require('./routes')
 
-const PORT = 8080
+const PORT = process.env.PORT || 6548
 
 migrationsRun();
 

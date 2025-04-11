@@ -59,6 +59,8 @@ class NotesController {
         .select([
           'notes.id',
           'notes.title',
+          'notes.description',
+          'notes.updated_at',
           'notes.user_id'
         ])
         .where('notes.user_id', user_id)
